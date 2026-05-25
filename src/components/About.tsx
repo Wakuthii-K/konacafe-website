@@ -26,28 +26,24 @@ export default function About() {
       <div className="col-span-12 lg:col-span-8 p-10 lg:p-16">
         <div className="max-w-2xl space-y-6 font-body text-muted leading-relaxed text-base">
           <p>
-            Kona Café Society is a curated intellectual collective based in
-            Nairobi. We exist at the intersection of deep curiosity and
-            consequential action — bringing together voices from across
-            disciplines to interrogate the ideas that shape how we live, govern,
-            and imagine the future.
+            Kona Café Society is a collective consisting of literati,
+            conversationalists, and leading creative entrepreneurs. Our mission
+            is to advance consequential conversations.
           </p>
           <p>
-            Each gathering anchors around a documentary, a text, or a
-            provocation — then opens into a structured conversation designed to
-            produce real intellectual friction. Not consensus, but clarity. Not
-            agreement, but understanding.
+            We bring together newsmakers and trendsetters; policymakers,
+            academics and practitioners; inventors, authors, technology leaders,
+            artists and creatives; and the (re)public under one roof to explore
+            the dynamics of our contemporary society and world, and chart a
+            collectively safe, predictable, and innovative future.
           </p>
           <p>
-            Our format is deliberate: an intimate room, a curated audience, and
-            a set of voices selected not for their titles, but for the rigour
-            and originality they bring. We convene quarterly, in Nairobi and
-            beyond.
+            We create the reality we so desire to see exist, even as we make
+            meaning of the present realities.
           </p>
           <p>
-            The Kona Café Society is not a networking event. It is not a panel
-            series. It is a fellowship of people who believe that the quality of
-            our questions determines the quality of our future.
+            At the Kona Café Society, you hear it first, and firsthand — and
+            see beyond the obvious.
           </p>
         </div>
       </div>
