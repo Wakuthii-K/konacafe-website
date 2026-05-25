@@ -29,13 +29,13 @@ export default function Hero() {
               href="/gatherings"
               className="inline-flex items-center gap-2 font-body text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium"
             >
-              Upcoming Gathering →
+              Gathering →
             </a>
             <a
               href="#about"
               className="inline-flex items-center font-body text-[10px] tracking-[0.18em] uppercase border border-[0.5px] border-gold/30 text-ink px-6 py-3 hover:border-gold/60 transition-colors"
             >
-              About the Collective
+              About
             </a>
           </div>
         </div>
