@@ -43,10 +43,7 @@ export default function Hero() {
 
       {/* Right */}
       <div className="col-span-12 lg:col-span-5 flex flex-col justify-end p-10 lg:p-16">
-        <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted mb-6">
-          The Collective
-        </p>
-        <p className="font-body text-muted leading-relaxed text-base max-w-sm">
+<p className="font-body text-muted leading-relaxed text-base max-w-sm">
           A convening platform and collective that brings together thought
           leaders, policy makers, academics, domain experts and creatives to
           unpack the dynamics of our world.
