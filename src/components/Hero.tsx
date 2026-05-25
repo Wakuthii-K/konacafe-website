@@ -12,7 +12,7 @@ export default function Hero() {
 
         <div>
           <h1
-            className="font-display font-normal italic text-cream leading-none"
+            className="font-display font-normal italic text-ink leading-none"
             style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
           >
             Where ideas
@@ -31,7 +31,7 @@ export default function Hero() {
             </a>
             <a
               href="#about"
-              className="inline-flex items-center font-body text-[10px] tracking-[0.18em] uppercase border border-[0.5px] border-gold/30 text-cream px-6 py-3 hover:border-gold/60 transition-colors"
+              className="inline-flex items-center font-body text-[10px] tracking-[0.18em] uppercase border border-[0.5px] border-gold/30 text-ink px-6 py-3 hover:border-gold/60 transition-colors"
             >
               About the Collective
             </a>
@@ -44,7 +44,7 @@ export default function Hero() {
         <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted mb-6">
           The Collective
         </p>
-        <p className="font-body text-warm leading-relaxed text-base max-w-sm">
+        <p className="font-body text-muted leading-relaxed text-base max-w-sm">
           A curated gathering of thinkers, makers, and changemakers convening
           at the intersection of ideas and consequence. We believe the most
           important conversations happen when the right minds share a room.

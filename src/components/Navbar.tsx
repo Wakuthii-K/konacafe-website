@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-16 bg-ink/80 backdrop-blur-md border-b border-[0.5px] border-gold/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-16 bg-cream/80 backdrop-blur-md border-b border-[0.5px] border-gold/20">
       <Link href="/" className="flex-shrink-0">
         <Image
           src="/kona_cafe_logo_gold_transparent.png"

@@ -11,7 +11,7 @@ export default function About() {
             001
           </p>
           <h2
-            className="font-display font-normal italic text-cream leading-tight"
+            className="font-display font-normal italic text-ink leading-tight"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           >
             About the
@@ -24,7 +24,7 @@ export default function About() {
 
       {/* Right: prose */}
       <div className="col-span-12 lg:col-span-8 p-10 lg:p-16">
-        <div className="max-w-2xl space-y-6 font-body text-warm leading-relaxed text-base">
+        <div className="max-w-2xl space-y-6 font-body text-muted leading-relaxed text-base">
           <p>
             Kona Café Society is a curated intellectual collective based in
             Nairobi. We exist at the intersection of deep curiosity and

@@ -25,8 +25,8 @@ html {
 }
 
 body {
-  background-color: var(--color-ink);
-  color: var(--color-cream);
+  background-color: var(--color-cream);
+  color: var(--color-ink);
 }
 
 ::selection {

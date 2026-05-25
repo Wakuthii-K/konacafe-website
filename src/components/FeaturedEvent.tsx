@@ -6,7 +6,7 @@ function MetaItem({ label, value }: { label: string; value: string }) {
       <p className="font-body text-[9px] tracking-[0.20em] uppercase text-muted mb-1">
         {label}
       </p>
-      <p className="font-body text-sm text-warm">{value}</p>
+      <p className="font-body text-sm text-ink">{value}</p>
     </div>
   );
 }
@@ -58,7 +58,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
 
         {/* Title */}
         <h2
-          className="font-display font-normal italic text-cream leading-none mb-3"
+          className="font-display font-normal italic text-ink leading-none mb-3"
           style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
         >
           {event.title}
@@ -66,7 +66,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
         <p className="font-display text-muted text-xl mb-8">{event.subtitle}</p>
 
         {/* Description */}
-        <p className="font-body text-warm leading-relaxed text-sm mb-10 max-w-lg">
+        <p className="font-body text-muted leading-relaxed text-sm mb-10 max-w-lg">
           {event.description}
         </p>
 
@@ -102,7 +102,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
               key={panelist.name}
               className="pb-6 border-b border-[0.5px] border-gold/10 last:border-0"
             >
-              <p className="font-display font-semibold text-cream text-xl">
+              <p className="font-display font-semibold text-ink text-xl">
                 {panelist.name}
               </p>
               <p className="font-body text-muted text-xs mt-1 leading-relaxed">
@@ -117,7 +117,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
             <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-3">
               Co-convened with
             </p>
-            <p className="font-display text-cream text-2xl">
+            <p className="font-display text-ink text-2xl">
               {event.coConvener}
             </p>
           </div>

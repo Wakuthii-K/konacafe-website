@@ -23,12 +23,12 @@ export default function JoinCTA() {
         003 — Join the Collective
       </p>
       <h2
-        className="font-display font-normal italic text-cream leading-tight mb-6"
+        className="font-display font-normal italic text-ink leading-tight mb-6"
         style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
       >
         Join the conversation.
       </h2>
-      <p className="font-body text-warm text-sm max-w-md mb-10 leading-relaxed">
+      <p className="font-body text-muted text-sm max-w-md mb-10 leading-relaxed">
         Receive invitations to upcoming gatherings and dispatches from the
         collective. Limited places. Curated membership.
       </p>
@@ -52,7 +52,7 @@ export default function JoinCTA() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             required
-            className="flex-1 bg-transparent border border-[0.5px] border-gold/30 px-5 py-3 font-body text-sm text-cream placeholder:text-muted focus:outline-none focus:border-gold/60 transition-colors"
+            className="flex-1 bg-transparent border border-[0.5px] border-gold/30 px-5 py-3 font-body text-sm text-ink placeholder:text-muted focus:outline-none focus:border-gold/60 transition-colors"
           />
           <button
             type="submit"
