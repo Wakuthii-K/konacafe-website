@@ -8,7 +8,7 @@ export default function Footer() {
         alt="Kona Café Society"
         width={120}
         height={30}
-        className="h-6 w-auto opacity-60"
+        className="h-14 w-auto opacity-60"
       />
       <p className="font-body text-[9px] tracking-[0.15em] uppercase text-muted">
         © 2024 Kona Café Society. All rights reserved.
