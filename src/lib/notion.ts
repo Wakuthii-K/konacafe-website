@@ -39,7 +39,7 @@ const FALLBACK_EVENT: KonaEvent = {
   format: "Documentary screening + panel discussion",
   description:
     "Who benefits when Africa's land becomes a carbon market? This gathering convenes voices from ecology, policy, community organising, and climate finance to interrogate the carbon credits business in Kenya — its impact on native communities and the ranging debate on land resource re-colonisation.",
-  rsvpUrl: "#",
+  rsvpUrl: "https://docs.google.com/forms/d/1Q2iY8YRAgV7-SB6Qsb5hvdRqYWJO-Mm962XdcERBJnk/viewform",
   featured: true,
   status: "Upcoming",
   coConvener: "Afrika House",
