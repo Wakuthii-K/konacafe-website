@@ -19,7 +19,7 @@ export default function Navbar() {
         {(
           [
             { label: "About", href: "#about" },
-            { label: "Gatherings", href: "#event" },
+            { label: "Gatherings", href: "/gatherings" },
             { label: "Collective", href: "#convene" },
           ] as const
         ).map((link) => (

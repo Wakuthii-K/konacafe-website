@@ -24,10 +24,10 @@ export default function Hero() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="#event"
+              href="/gatherings"
               className="inline-flex items-center gap-2 font-body text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium"
             >
-              Upcoming Gathering <span>→</span>
+              Upcoming Gathering →
             </a>
             <a
               href="#about"
