@@ -51,12 +51,6 @@ export default function Hero() {
           leaders, policy makers, academics, domain experts and creatives to
           unpack the dynamics of our world.
         </p>
-        <div className="mt-12 flex items-center gap-4">
-          <div className="w-8 h-[0.5px] bg-gold/50" />
-          <span className="font-body text-[10px] tracking-[0.22em] uppercase text-muted">
-            Est. 2024
-          </span>
-        </div>
       </div>
     </section>
   );
