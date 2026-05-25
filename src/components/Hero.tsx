@@ -21,7 +21,7 @@ export default function Hero() {
             <br />
             in Nairobi are
             <br />
-            assembling.
+            assembling...
           </h1>
 
           <div className="mt-10 flex flex-wrap gap-4">
