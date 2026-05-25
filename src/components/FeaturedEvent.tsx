@@ -96,11 +96,11 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
         <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
           Panelists
         </p>
-        <div className="space-y-6">
+        <div className="divide-y divide-[0.5px] divide-gold/10">
           {event.panelists.map((panelist) => (
             <div
               key={panelist.name}
-              className="pb-6 border-b border-[0.5px] border-gold/10 last:border-0"
+              className="py-6 first:pt-0"
             >
               <p className="font-display font-semibold text-ink text-xl">
                 {panelist.name}
