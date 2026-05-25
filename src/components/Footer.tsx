@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Instagram } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -19,7 +18,11 @@ export default function Footer() {
           className="text-muted hover:text-ink transition-colors"
           aria-label="Instagram"
         >
-          <Instagram size={18} strokeWidth={1.5} />
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <circle cx="12" cy="12" r="4"/>
+              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+            </svg>
         </a>
         <p className="font-body text-[9px] tracking-[0.15em] uppercase text-muted">
           © 2024 Kona Café Society. All rights reserved.
