@@ -30,16 +30,13 @@ export default function WhoWeConvene() {
     <section id="convene" className="border-b border-[0.5px] border-gold/10">
       <div className="p-10 lg:p-16 border-b border-[0.5px] border-gold/10">
         <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted">
-          002 — Who We Convene
+          Who We Convene
         </p>
       </div>
       {/* Gap-as-border grid technique */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[0.5px] bg-gold/10">
         {PILLARS.map((pillar, i) => (
           <div key={pillar.title} className="bg-cream p-10 lg:p-12">
-            <span className="font-body text-[9px] tracking-[0.18em] text-gold/50">
-              0{i + 1}
-            </span>
             <h3 className="font-display font-normal text-ink text-2xl mt-3 mb-4">
               {pillar.title}
             </h3>

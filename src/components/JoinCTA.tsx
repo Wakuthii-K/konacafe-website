@@ -20,7 +20,7 @@ export default function JoinCTA() {
       className="border-b border-[0.5px] border-gold/10 p-10 lg:p-24 flex flex-col items-center text-center"
     >
       <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-6">
-        003 — Join the Collective
+        Join the Collective
       </p>
       <h2
         className="font-display font-normal italic text-ink leading-tight mb-6"

@@ -7,10 +7,7 @@ export default function About() {
       {/* Left: sticky heading */}
       <div className="col-span-12 lg:col-span-4 p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
         <div className="lg:sticky lg:top-24">
-          <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-4">
-            001
-          </p>
-          <h2
+<h2
             className="font-display font-normal italic text-ink leading-tight"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           >
