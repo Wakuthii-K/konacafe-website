@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex items-center justify-between px-10 lg:px-16 py-8">
       <Image
-        src="/kona_cafe_logo_gold_transparent.png"
+        src="/kona_cafe_logo_black_transparent.png"
         alt="Kona Café Society"
         width={120}
         height={30}

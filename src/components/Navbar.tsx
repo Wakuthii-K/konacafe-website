@@ -6,7 +6,7 @@ export default function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 h-16 bg-cream/80 backdrop-blur-md border-b border-[0.5px] border-gold/20">
       <Link href="/" className="flex-shrink-0">
         <Image
-          src="/kona_cafe_logo_gold_transparent.png"
+          src="/kona_cafe_logo_black_transparent.png"
           alt="Kona Café Society"
           width={160}
           height={40}

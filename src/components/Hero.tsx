@@ -5,7 +5,7 @@ export default function Hero() {
       <div className="col-span-12 lg:col-span-7 flex flex-col justify-between p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
         <div>
           <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted">
-            Kona Café Society · Nairobi
+            Advancing consequential conversations
           </p>
           <div className="w-12 h-[0.5px] bg-gold/50 mt-4" />
         </div>
@@ -15,11 +15,13 @@ export default function Hero() {
             className="font-display font-normal italic text-ink leading-none"
             style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
           >
-            Where ideas
+            Intellectually
             <br />
-            meet
+            restless minds
             <br />
-            consequence.
+            in Nairobi are
+            <br />
+            assembling.
           </h1>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -45,9 +47,9 @@ export default function Hero() {
           The Collective
         </p>
         <p className="font-body text-muted leading-relaxed text-base max-w-sm">
-          A curated gathering of thinkers, makers, and changemakers convening
-          at the intersection of ideas and consequence. We believe the most
-          important conversations happen when the right minds share a room.
+          A convening platform and collective that brings together thought
+          leaders, policy makers, academics, domain experts and creatives to
+          unpack the dynamics of our world.
         </p>
         <div className="mt-12 flex items-center gap-4">
           <div className="w-8 h-[0.5px] bg-gold/50" />
