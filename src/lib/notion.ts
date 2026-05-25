@@ -52,15 +52,7 @@ const FALLBACK_EVENT: KonaEvent = {
       name: "Mordecai Ogada",
       role: "Carnivore ecologist & conservation policy scholar",
     },
-    {
-      name: "Donald Maringa",
-      role: "East Africa Climate Officer · Plan Vivo",
-    },
-    {
-      name: "Jane Mukami",
-      role: "Community organiser & activist · Golden Fields Association",
-    },
-    { name: "Moses Maesya", role: "TBC" },
+    { name: "Moses Maesya", role: "Community Leader" },
   ],
 };
 
