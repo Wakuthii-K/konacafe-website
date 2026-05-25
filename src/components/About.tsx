@@ -11,9 +11,7 @@ export default function About() {
             className="font-display font-normal italic text-ink leading-tight"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           >
-            About the
-            <br />
-            Collective
+            About
           </h2>
           <div className="w-8 h-[0.5px] bg-gold/50 mt-6" />
         </div>

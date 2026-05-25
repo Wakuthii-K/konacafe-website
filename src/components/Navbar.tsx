@@ -37,7 +37,7 @@ export default function Navbar() {
         href="#join"
         className="font-body text-[10px] tracking-[0.15em] uppercase text-gold border border-[0.5px] border-gold/50 px-5 py-2 hover:bg-gold hover:text-ink transition-colors"
       >
-        Join the Collective
+        Join the Conversation
       </Link>
     </nav>
   );
