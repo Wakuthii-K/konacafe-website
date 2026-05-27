@@ -19,27 +19,23 @@ export default function About() {
 
       {/* Right: prose */}
       <div className="col-span-12 lg:col-span-8 p-10 lg:p-16">
-        <div className="max-w-2xl space-y-6 font-body text-muted leading-relaxed text-base">
-          <p>
-            Kona Café Society is a collective consisting of literati,
-            conversationalists, and leading creative entrepreneurs. Our mission
-            is to advance consequential conversations.
-          </p>
-          <p>
-            We bring together newsmakers and trendsetters; policymakers,
-            academics and practitioners; inventors, authors, technology leaders,
-            artists and creatives; and the (re)public under one roof to explore
-            the dynamics of our contemporary society and world, and chart a
-            collectively safe, predictable, and innovative future.
-          </p>
-          <p>
-            We create the reality we so desire to see exist, even as we make
-            meaning of the present realities.
-          </p>
-          <p>
-            At the Kona Café Society, you hear it first, and firsthand — and
-            see beyond the obvious.
-          </p>
+        <div className="max-w-2xl space-y-8">
+          <h3
+            className="font-display font-normal italic text-ink leading-tight"
+            style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
+          >
+            We are the Kona Café Society.
+          </h3>
+          <div className="space-y-6 font-body text-muted leading-relaxed text-base">
+            <p>
+              A convening platform and collective that brings together thought
+              leaders, policy makers, academics, domain experts and creatives to
+              unpack the dynamics of our world.
+            </p>
+            <p className="font-display italic text-ink text-xl">
+              Advancing consequential conversations.
+            </p>
+          </div>
         </div>
       </div>
     </section>
