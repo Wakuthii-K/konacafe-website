@@ -1,14 +1,14 @@
 "use client";
 
 const WORDS = [
-  { text: "Screenings",        size: "clamp(5rem, 13vw, 11rem)",  opacity: 0.9,  align: "left"   },
-  { text: "Panel",             size: "clamp(5rem, 13vw, 11rem)",  opacity: 0.4,  align: "right"  },
-  { text: "Discussions",       size: "clamp(4rem, 10vw, 8.5rem)", opacity: 0.55, align: "left"   },
-  { text: "Policy & Industry", size: "clamp(2.5rem, 6vw, 5rem)",  opacity: 0.85, align: "right"  },
-  { text: "Conversations",     size: "clamp(3rem, 7.5vw, 6.5rem)",opacity: 0.85, align: "left"   },
-  { text: "Lectures",          size: "clamp(5rem, 12vw, 10rem)",  opacity: 0.35, align: "right"  },
-  { text: "Workshops",         size: "clamp(4rem, 10vw, 8.5rem)", opacity: 0.9,  align: "left"   },
-  { text: "Salons",            size: "clamp(5rem, 12vw, 10rem)",  opacity: 0.55, align: "right"  },
+  { text: "Screenings",        size: "clamp(5rem, 12vw, 10rem)",  opacity: 0.9,  indent: "0%" },
+  { text: "Panel",             size: "clamp(3rem, 7vw, 6rem)",    opacity: 0.4,  indent: "18%" },
+  { text: "Discussions",       size: "clamp(3rem, 7vw, 6rem)",    opacity: 0.55, indent: "10%" },
+  { text: "Policy & Industry", size: "clamp(2rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
+  { text: "Conversations",     size: "clamp(2rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
+  { text: "Lectures",          size: "clamp(4rem, 9vw, 7.5rem)",  opacity: 0.35, indent: "8%" },
+  { text: "Workshops",         size: "clamp(4rem, 9vw, 7.5rem)",  opacity: 0.9,  indent: "0%" },
+  { text: "Salons",            size: "clamp(1.8rem, 4vw, 3rem)",  opacity: 0.55, indent: "22%" },
 ];
 
 export default function HowWeConvene() {
@@ -18,7 +18,7 @@ export default function HowWeConvene() {
         How We Convene
       </p>
       <div className="flex flex-col justify-between flex-1">
-        {WORDS.map(({ text, size, opacity, align }) => (
+        {WORDS.map(({ text, size, opacity, indent }) => (
           <span
             key={text}
             className="block font-display font-bold uppercase cursor-default how-we-convene-word"
@@ -26,7 +26,7 @@ export default function HowWeConvene() {
               fontSize: size,
               lineHeight: 0.92,
               color: `rgba(245, 240, 232, ${opacity})`,
-              textAlign: align as "left" | "right",
+              marginLeft: indent,
             }}
           >
             {text}
