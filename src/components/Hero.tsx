@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Left */}
       <div className="relative col-span-12 lg:col-span-7 flex flex-col justify-between p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
         <div>
-          <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted">
+          <p className="font-body text-[10px] tracking-[0.22em] uppercase text-white/70">
             Advancing consequential conversations
           </p>
           <div className="w-12 h-[0.5px] bg-gold/50 mt-4" />
@@ -18,7 +18,7 @@ export default function Hero() {
 
         <div>
           <h1
-            className="font-display font-normal italic text-ink leading-none"
+            className="font-display font-normal italic text-white leading-none"
             style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
           >
             Intellectually
@@ -39,7 +39,7 @@ export default function Hero() {
             </a>
             <a
               href="#about"
-              className="inline-flex items-center font-body text-[10px] tracking-[0.18em] uppercase border border-[0.5px] border-gold/30 text-ink px-6 py-3 hover:border-gold/60 transition-colors"
+              className="inline-flex items-center font-body text-[10px] tracking-[0.18em] uppercase border border-[0.5px] border-white/40 text-white px-6 py-3 hover:border-white/70 transition-colors"
             >
               About
             </a>
@@ -49,7 +49,7 @@ export default function Hero() {
 
       {/* Right */}
       <div className="relative col-span-12 lg:col-span-5 flex flex-col justify-end p-10 lg:p-16">
-<p className="font-body text-muted leading-relaxed text-base max-w-sm">
+<p className="font-body text-white/80 leading-relaxed text-base max-w-sm">
           A convening platform and collective that brings together thought
           leaders, policy makers, academics, domain experts and creatives to
           unpack the dynamics of our world.
