@@ -5,7 +5,7 @@ export default function About() {
       className="border-b border-[0.5px] border-gold/10 grid grid-cols-12"
     >
       {/* Prose */}
-      <div className="col-span-12 p-10 lg:p-16">
+      <div className="col-span-12 p-10 lg:p-16 flex flex-col items-center text-center">
         <div className="max-w-2xl space-y-8">
           <h3
             className="font-display font-normal italic text-ink leading-tight"
