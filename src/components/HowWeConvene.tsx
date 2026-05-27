@@ -13,27 +13,36 @@ const WORDS = [
 
 export default function HowWeConvene() {
   return (
-    <section className="bg-ink border-b border-[0.5px] border-gold/10 px-10 lg:px-16 py-16">
-      <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-12">
+    <section className="bg-ink border-b border-[0.5px] border-gold/10 px-10 lg:px-16 py-16 flex flex-col min-h-[90vh]">
+      <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
         How We Convene
       </p>
-      <div className="flex flex-col gap-1">
+      <div className="flex flex-col justify-between flex-1">
         {WORDS.map(({ text, size, opacity, indent }) => (
           <span
             key={text}
-            className="block font-display font-bold uppercase transition-colors duration-300 cursor-default hover:text-gold"
+            className="block font-display font-bold uppercase cursor-default how-we-convene-word"
             style={{
               fontSize: size,
               lineHeight: 0.92,
-              opacity,
+              color: `rgba(245, 240, 232, ${opacity})`,
               marginLeft: indent,
-              color: "var(--color-cream)",
             }}
           >
             {text}
           </span>
         ))}
       </div>
+
+      <style>{`
+        .how-we-convene-word {
+          transition: color 0.6s ease, letter-spacing 0.4s ease;
+        }
+        .how-we-convene-word:hover {
+          color: #b8943a !important;
+          letter-spacing: 0.04em;
+        }
+      `}</style>
     </section>
   );
 }
