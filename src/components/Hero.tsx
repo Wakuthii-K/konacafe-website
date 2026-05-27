@@ -1,8 +1,16 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen pt-16 grid grid-cols-12 border-b border-[0.5px] border-gold/10">
+    <section className="relative min-h-screen pt-16 grid grid-cols-12 border-b border-[0.5px] border-gold/10 overflow-hidden">
+      {/* Background image */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: "url('/kona cafe.jpeg')" }}
+      />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-cream/80" />
+
       {/* Left */}
-      <div className="col-span-12 lg:col-span-7 flex flex-col justify-between p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
+      <div className="relative col-span-12 lg:col-span-7 flex flex-col justify-between p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
         <div>
           <p className="font-body text-[10px] tracking-[0.22em] uppercase text-muted">
             Advancing consequential conversations
@@ -42,7 +50,7 @@ export default function Hero() {
       </div>
 
       {/* Right */}
-      <div className="col-span-12 lg:col-span-5 flex flex-col justify-end p-10 lg:p-16">
+      <div className="relative col-span-12 lg:col-span-5 flex flex-col justify-end p-10 lg:p-16">
 <p className="font-body text-muted leading-relaxed text-base max-w-sm">
           A convening platform and collective that brings together thought
           leaders, policy makers, academics, domain experts and creatives to
