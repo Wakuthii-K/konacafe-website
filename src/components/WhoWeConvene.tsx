@@ -1,27 +1,31 @@
 const PILLARS = [
   {
-    title: "Thought Leaders",
-    desc: "Practitioners and public intellectuals whose ideas cut across disciplines and challenge dominant narratives.",
+    title: "Newsmakers & Trendsetters",
+    desc: "Those shaping the conversation — journalists, influencers, and cultural voices defining what matters now.",
   },
   {
-    title: "Policy Makers",
+    title: "Policymakers",
     desc: "Legislators, advisors, and civil servants with the leverage to translate ideas into structural change.",
   },
   {
-    title: "Academics",
-    desc: "Researchers and scholars bringing empirical rigour and theoretical depth to the conversations that matter.",
+    title: "Academics & Practitioners",
+    desc: "Researchers and on-the-ground practitioners bridging theory with lived experience and evidence.",
   },
   {
-    title: "Domain Experts",
-    desc: "Specialists in fields from ecology to finance whose deep knowledge grounds discussion in reality.",
+    title: "Inventors & Authors",
+    desc: "Thinkers who build and write new worlds — from product inventors to the authors shaping our intellectual landscape.",
   },
   {
-    title: "Creatives",
-    desc: "Artists, writers, filmmakers, and designers whose practice illuminates what data and argument alone cannot.",
+    title: "Technology Leaders",
+    desc: "Builders and strategists at the frontier of technology, driving the systems that shape society.",
   },
   {
-    title: "Changemakers",
-    desc: "Organisers, advocates, and entrepreneurs operating at the frontier of social and environmental transformation.",
+    title: "Artists & Creatives",
+    desc: "Artists, designers, and creatives whose practice illuminates what data and argument alone cannot.",
+  },
+  {
+    title: "The (Re)Public",
+    desc: "Citizens, communities, and everyday voices whose lived realities ground every conversation in truth.",
   },
 ];
 
