@@ -49,11 +49,14 @@ export default function Hero() {
 
       {/* Right */}
       <div className="relative col-span-12 lg:col-span-5 flex flex-col justify-end p-10 lg:p-16">
-<p className="font-body text-white/80 leading-relaxed text-base max-w-sm">
-          A convening platform and collective that brings together thought
-          leaders, policy makers, academics, domain experts and creatives to
-          unpack the dynamics of our world.
-        </p>
+<p
+            className="font-display font-normal italic text-white leading-none"
+            style={{ fontSize: "clamp(1.5rem, 3.5vw, 3rem)" }}
+          >
+            Limited seats,
+            <br />
+            unlimited opinions...
+          </p>
       </div>
     </section>
   );
