@@ -39,16 +39,24 @@ export default function WhoWeConvene() {
       </div>
       {/* Gap-as-border grid technique */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[0.5px] bg-gold/10">
-        {PILLARS.map((pillar, i) => (
-          <div key={pillar.title} className="bg-cream p-10 lg:p-12">
-            <h3 className="font-display font-normal text-ink text-2xl mt-3 mb-4">
-              {pillar.title}
-            </h3>
-            <p className="font-body text-muted text-xs leading-relaxed">
-              {pillar.desc}
-            </p>
-          </div>
-        ))}
+        {PILLARS.map((pillar, i) => {
+          const isLast = i === PILLARS.length - 1;
+          const remainder = PILLARS.length % 3;
+          const spansFullRow = isLast && remainder === 1;
+          return (
+            <div
+              key={pillar.title}
+              className={`bg-cream p-10 lg:p-12 ${spansFullRow ? "lg:col-span-3 flex flex-col items-center text-center" : ""}`}
+            >
+              <h3 className="font-display font-normal text-ink text-2xl mt-3 mb-4">
+                {pillar.title}
+              </h3>
+              <p className={`font-body text-muted text-xs leading-relaxed ${spansFullRow ? "max-w-sm" : ""}`}>
+                {pillar.desc}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </section>
   );
