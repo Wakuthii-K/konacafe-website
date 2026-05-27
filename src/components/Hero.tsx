@@ -30,20 +30,6 @@ export default function Hero() {
             assembling...
           </h1>
 
-          <div className="mt-10 flex flex-wrap gap-4">
-            <a
-              href="/gatherings"
-              className="inline-flex items-center gap-2 font-body text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium"
-            >
-              Gathering →
-            </a>
-            <a
-              href="#about"
-              className="inline-flex items-center font-body text-[10px] tracking-[0.18em] uppercase border border-[0.5px] border-white/40 text-white px-6 py-3 hover:border-white/70 transition-colors"
-            >
-              About
-            </a>
-          </div>
         </div>
       </div>
 

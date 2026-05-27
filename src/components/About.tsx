@@ -19,9 +19,6 @@ export default function About() {
               leaders, policy makers, academics, domain experts and creatives to
               unpack the dynamics of our world.
             </p>
-            <p className="font-display italic text-ink text-xl">
-              Advancing consequential conversations.
-            </p>
           </div>
         </div>
       </div>
