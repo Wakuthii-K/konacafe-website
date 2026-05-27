@@ -6,8 +6,6 @@ export default function Hero() {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: "url('/kona cafe.jpeg')" }}
       />
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-cream/80" />
 
       {/* Left */}
       <div className="relative col-span-12 lg:col-span-7 flex flex-col justify-between p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
