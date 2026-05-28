@@ -25,7 +25,7 @@ export default function Footer() {
             </svg>
         </a>
         <p className="font-body text-[9px] tracking-[0.15em] uppercase text-muted">
-          © 2024 Kona Café Society. All rights reserved.
+          © 2026 Kona Café Society.
         </p>
       </div>
     </footer>

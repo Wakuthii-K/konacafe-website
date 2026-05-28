@@ -1,19 +1,19 @@
 "use client";
 
 const WORDS = [
-  { text: "Screenings",        size: "clamp(5rem, 12vw, 10rem)",  opacity: 0.9,  indent: "0%" },
-  { text: "Panel",             size: "clamp(3rem, 7vw, 6rem)",    opacity: 0.4,  indent: "18%" },
-  { text: "Discussions",       size: "clamp(3rem, 7vw, 6rem)",    opacity: 0.55, indent: "10%" },
-  { text: "Policy & Industry", size: "clamp(2rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
-  { text: "Conversations",     size: "clamp(2rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
-  { text: "Lectures",          size: "clamp(4rem, 9vw, 7.5rem)",  opacity: 0.35, indent: "8%" },
-  { text: "Workshops",         size: "clamp(4rem, 9vw, 7.5rem)",  opacity: 0.9,  indent: "0%" },
-  { text: "Salons",            size: "clamp(1.8rem, 4vw, 3rem)",  opacity: 0.55, indent: "22%" },
+  { text: "Screenings",        size: "clamp(1.5rem, 8vw, 10rem)",  opacity: 0.9,  indent: "0%" },
+  { text: "Panel",             size: "clamp(1.4rem, 7vw, 6rem)",  opacity: 0.4,  indent: "18%" },
+  { text: "Discussions",       size: "clamp(1.4rem, 7vw, 6rem)",  opacity: 0.55, indent: "10%" },
+  { text: "Policy & Industry", size: "clamp(1rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
+  { text: "Conversations",     size: "clamp(1rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
+  { text: "Lectures",          size: "clamp(1.8rem, 9vw, 7.5rem)", opacity: 0.35, indent: "8%" },
+  { text: "Workshops",         size: "clamp(1.8rem, 9vw, 7.5rem)", opacity: 0.9,  indent: "0%" },
+  { text: "Salons",            size: "clamp(1rem, 4vw, 3rem)",    opacity: 0.55, indent: "22%" },
 ];
 
 export default function HowWeConvene() {
   return (
-    <section className="bg-ink border-b border-[0.5px] border-gold/10 px-10 lg:px-16 py-16 flex flex-col min-h-[90vh]">
+    <section className="bg-ink border-b border-[0.5px] border-gold/10 px-6 lg:px-16 py-10 lg:py-16 flex flex-col min-h-[90vh] overflow-hidden">
       <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
         How We Convene
       </p>
