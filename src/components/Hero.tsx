@@ -18,7 +18,7 @@ export default function Hero() {
 
         <div>
           <h1
-            className="font-display font-normal italic text-white leading-none"
+            className="font-display font-bold text-white leading-none"
             style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
           >
             Intellectually
@@ -36,7 +36,7 @@ export default function Hero() {
       {/* Right */}
       <div className="relative col-span-12 lg:col-span-5 flex flex-col justify-end p-10 lg:p-16">
 <p
-            className="font-display font-normal italic text-white leading-none"
+            className="font-display font-bold text-white leading-none"
             style={{ fontSize: "clamp(1.5rem, 3.5vw, 3rem)" }}
           >
             Limited seats,

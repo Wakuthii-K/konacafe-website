@@ -8,7 +8,6 @@ const WORDS = [
   { text: "Conversations",     size: "clamp(1rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
   { text: "Lectures",          size: "clamp(1.8rem, 9vw, 7.5rem)", opacity: 0.35, indent: "8%" },
   { text: "Workshops",         size: "clamp(1.8rem, 9vw, 7.5rem)", opacity: 0.9,  indent: "0%" },
-  { text: "Salons",            size: "clamp(1rem, 4vw, 3rem)",    opacity: 0.55, indent: "22%" },
 ];
 
 export default function HowWeConvene() {

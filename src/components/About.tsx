@@ -8,7 +8,7 @@ export default function About() {
       <div className="col-span-12 p-10 lg:p-16 flex flex-col items-center text-center">
         <div className="max-w-2xl space-y-8">
           <h3
-            className="font-display font-normal italic text-ink leading-tight"
+            className="font-body font-normal text-ink leading-tight"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           >
             We are the Kona Café Society.
