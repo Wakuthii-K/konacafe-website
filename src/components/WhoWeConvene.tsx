@@ -48,7 +48,7 @@ export default function WhoWeConvene() {
               key={pillar.title}
               className={`bg-cream p-6 lg:p-12 ${spansFullRow ? "lg:col-span-3 flex flex-col items-center text-center" : ""}`}
             >
-              <h3 className="font-display font-normal text-ink text-2xl mt-3 mb-4">
+              <h3 className="font-body font-normal text-ink text-2xl mt-3 mb-4">
                 {pillar.title}
               </h3>
               <p className={`font-body text-muted text-xs leading-relaxed ${spansFullRow ? "max-w-sm" : ""}`}>
