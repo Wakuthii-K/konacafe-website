@@ -8,12 +8,12 @@ export default function About() {
       <div className="col-span-12 p-10 lg:p-16 flex flex-col items-center text-center">
         <div className="max-w-2xl space-y-8">
           <h3
-            className="font-body font-normal text-ink leading-tight"
+            className="font-display font-normal text-ink leading-tight"
             style={{ fontSize: "clamp(2rem, 4vw, 3rem)" }}
           >
             We are the Kona Café Society.
           </h3>
-          <div className="space-y-6 font-body text-muted leading-relaxed text-base">
+          <div className="space-y-6 font-display text-muted leading-relaxed text-base">
             <p>
               A convening platform and collective that brings together thought
               leaders, policy makers, academics, domain experts and creatives to

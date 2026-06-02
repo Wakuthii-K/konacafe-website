@@ -25,7 +25,7 @@ export default function JoinCTA() {
       >
         Join the conversation.
       </h2>
-      <p className="font-body text-muted text-sm max-w-md mb-10 leading-relaxed">
+      <p className="font-display text-muted text-sm max-w-md mb-10 leading-relaxed">
         Receive invitations to upcoming gatherings and dispatches from the
         collective. Limited places. Curated membership.
       </p>
@@ -33,7 +33,7 @@ export default function JoinCTA() {
       {submitted ? (
         <div className="flex items-center gap-4">
           <div className="w-8 h-[0.5px] bg-gold" />
-          <p className="font-body text-[10px] tracking-[0.18em] uppercase text-gold">
+          <p className="font-display text-[10px] tracking-[0.18em] uppercase text-gold">
             Welcome to the collective. We&apos;ll be in touch.
           </p>
           <div className="w-8 h-[0.5px] bg-gold" />
@@ -49,11 +49,11 @@ export default function JoinCTA() {
             onChange={(e) => setEmail(e.target.value)}
             placeholder="your@email.com"
             required
-            className="flex-1 bg-transparent border border-[0.5px] border-gold/30 px-5 py-3 font-body text-sm text-ink placeholder:text-muted focus:outline-none focus:border-gold/60 transition-colors"
+            className="flex-1 bg-transparent border border-[0.5px] border-gold/30 px-5 py-3 font-display text-sm text-ink placeholder:text-muted focus:outline-none focus:border-gold/60 transition-colors"
           />
           <button
             type="submit"
-            className="font-body text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium whitespace-nowrap"
+            className="font-display text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium whitespace-nowrap"
           >
             Join →
           </button>

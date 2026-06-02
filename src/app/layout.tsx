@@ -28,7 +28,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${cormorant.variable} ${dmSans.variable}`}>
-      <body className="bg-cream text-ink font-body antialiased overflow-x-hidden">{children}</body>
+      <body className="bg-cream text-ink font-display antialiased overflow-x-hidden">{children}</body>
     </html>
   );
 }

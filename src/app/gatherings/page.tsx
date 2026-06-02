@@ -17,7 +17,7 @@ export default async function GatheringsPage() {
       <Navbar />
       <main className="pt-16">
         <div className="p-10 lg:p-16 border-b border-[0.5px] border-gold/20">
-          <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted">
+          <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted">
             Gatherings
           </p>
         </div>

@@ -10,7 +10,7 @@ export default function Hero() {
       {/* Left */}
       <div className="relative col-span-12 lg:col-span-7 flex flex-col justify-between p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
         <div>
-          <p className="font-body text-[10px] tracking-[0.22em] uppercase text-white/70">
+          <p className="font-display text-[10px] tracking-[0.22em] uppercase text-white/70">
             Advancing consequential conversations
           </p>
           <div className="w-12 h-[0.5px] bg-gold/50 mt-4" />

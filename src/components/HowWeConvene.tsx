@@ -13,7 +13,7 @@ const WORDS = [
 export default function HowWeConvene() {
   return (
     <section className="bg-ink border-b border-[0.5px] border-gold/10 px-6 lg:px-16 py-10 lg:py-16 flex flex-col min-h-[90vh] overflow-hidden">
-      <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
+      <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
         How We Convene
       </p>
       <div className="flex flex-col justify-between flex-1">

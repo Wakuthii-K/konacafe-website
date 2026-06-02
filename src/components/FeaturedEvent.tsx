@@ -3,10 +3,10 @@ import type { KonaEvent } from "@/lib/notion";
 function MetaItem({ label, value }: { label: string; value: string }) {
   return (
     <div>
-      <p className="font-body text-[9px] tracking-[0.20em] uppercase text-muted mb-1">
+      <p className="font-display text-[9px] tracking-[0.20em] uppercase text-muted mb-1">
         {label}
       </p>
-      <p className="font-body text-sm text-ink">{value}</p>
+      <p className="font-display text-sm text-ink">{value}</p>
     </div>
   );
 }
@@ -35,11 +35,11 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
       <div className="col-span-12 lg:col-span-7 p-10 lg:p-16 border-b border-[0.5px] border-gold/10 lg:border-b-0 lg:border-r">
         {/* Series badge */}
         <div className="flex items-center gap-3 mb-10">
-          <span className="font-body text-[9px] tracking-[0.22em] uppercase text-gold">
+          <span className="font-display text-[9px] tracking-[0.22em] uppercase text-gold">
             {event.series}
           </span>
           <span className="text-gold/30">·</span>
-          <span className="font-body text-[9px] tracking-[0.22em] uppercase text-muted">
+          <span className="font-display text-[9px] tracking-[0.22em] uppercase text-muted">
             {event.seriesNumber}
           </span>
         </div>
@@ -47,7 +47,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
         {/* Documentary anchor */}
         {event.documentaryAnchor && (
           <div className="mb-8">
-            <p className="font-body text-[9px] tracking-[0.15em] uppercase text-muted mb-2">
+            <p className="font-display text-[9px] tracking-[0.15em] uppercase text-muted mb-2">
               Anchored in the documentary
             </p>
             <p className="font-display italic text-gold-light text-lg">
@@ -66,7 +66,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
         <p className="font-display text-muted text-xl mb-8">{event.subtitle}</p>
 
         {/* Description */}
-        <p className="font-body text-muted leading-relaxed text-sm mb-10 max-w-lg">
+        <p className="font-display text-muted leading-relaxed text-sm mb-10 max-w-lg">
           {event.description}
         </p>
 
@@ -85,7 +85,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
           href={event.rsvpUrl}
           target={event.rsvpUrl !== "#" ? "_blank" : undefined}
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 font-body text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-8 py-4 hover:bg-gold-light transition-colors font-medium"
+          className="inline-flex items-center gap-3 font-display text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-8 py-4 hover:bg-gold-light transition-colors font-medium"
         >
           Reserve Your Place →
         </a>
@@ -93,7 +93,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
 
       {/* Right */}
       <div className="col-span-12 lg:col-span-5 p-10 lg:p-16">
-        <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
+        <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
           Panelists
         </p>
         <div className="divide-y divide-[0.5px] divide-gold/10">
@@ -105,7 +105,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
               <p className="font-display font-semibold text-ink text-xl">
                 {panelist.name}
               </p>
-              <p className="font-body text-muted text-xs mt-1 leading-relaxed">
+              <p className="font-display text-muted text-xs mt-1 leading-relaxed">
                 {panelist.role}
               </p>
             </div>
@@ -114,7 +114,7 @@ export default function FeaturedEvent({ event }: { event: KonaEvent }) {
 
         {event.coConvener && (
           <div className="mt-12 pt-8 border-t border-[0.5px] border-gold/10">
-            <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted mb-3">
+            <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted mb-3">
               Co-convened with
             </p>
             <p className="font-display text-ink text-2xl">

@@ -24,7 +24,7 @@ export default function Footer() {
               <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
             </svg>
         </a>
-        <p className="font-body text-[9px] tracking-[0.15em] uppercase text-muted">
+        <p className="font-display text-[9px] tracking-[0.15em] uppercase text-muted">
           © 2026 Kona Café Society.
         </p>
       </div>

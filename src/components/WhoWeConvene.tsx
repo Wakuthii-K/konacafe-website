@@ -33,7 +33,7 @@ export default function WhoWeConvene() {
   return (
     <section id="convene" className="border-b border-[0.5px] border-gold/10 overflow-hidden">
       <div className="p-6 lg:p-16 border-b border-[0.5px] border-gold/10">
-        <p className="font-body text-[9px] tracking-[0.22em] uppercase text-muted">
+        <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted">
           Who We Convene
         </p>
       </div>
@@ -48,10 +48,10 @@ export default function WhoWeConvene() {
               key={pillar.title}
               className={`bg-cream p-6 lg:p-12 ${spansFullRow ? "lg:col-span-3 flex flex-col items-center text-center" : ""}`}
             >
-              <h3 className="font-body font-normal text-ink text-2xl mt-3 mb-4">
+              <h3 className="font-display font-normal text-ink text-2xl mt-3 mb-4">
                 {pillar.title}
               </h3>
-              <p className={`font-body text-muted text-xs leading-relaxed ${spansFullRow ? "max-w-sm" : ""}`}>
+              <p className={`font-display text-muted text-xs leading-relaxed ${spansFullRow ? "max-w-sm" : ""}`}>
                 {pillar.desc}
               </p>
             </div>

@@ -18,7 +18,7 @@ export default function Marquee() {
         {items.map((topic, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-6 px-8 font-body text-[10px] tracking-[0.20em] uppercase text-muted"
+            className="inline-flex items-center gap-6 px-8 font-display text-[10px] tracking-[0.20em] uppercase text-muted"
           >
             {topic}
             <span className="text-gold/40 text-xs">✦</span>
