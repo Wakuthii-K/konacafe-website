@@ -17,9 +17,13 @@ export default function JoinCTA() {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
 
-  function handleSubmit(e: React.FormEvent) {
+  async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    // TODO: Connect to backend / Mailchimp
+    await fetch("/api/join", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(form),
+    });
     setSubmitted(true);
   }
 
@@ -41,8 +45,10 @@ export default function JoinCTA() {
         Join the conversation.
       </h2>
       <p className="font-display text-muted text-sm max-w-md mb-10 leading-relaxed">
-        Receive invitations to upcoming gatherings and dispatches from the
-        collective. Limited places. Curated membership.
+        Receive invitations to upcoming gatherings.
+      </p>
+      <p className="font-display text-muted text-sm max-w-md mb-10 leading-relaxed">
+        Limited Places. Curated Membership.
       </p>
 
       <button
@@ -78,7 +84,7 @@ export default function JoinCTA() {
                   Join the Collective
                 </p>
                 <h3
-                  className="font-display font-normal italic text-ink leading-tight mb-8"
+                  className="font-display font-normal text-ink leading-tight mb-8"
                   style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
                 >
                   Tell us about yourself.
@@ -116,17 +122,19 @@ export default function JoinCTA() {
                   <input
                     type="text"
                     name="profession"
-                    placeholder="Profession / Role"
+                    placeholder="Domain / What You Do / Area of Expertise / Profession"
                     value={form.profession}
                     onChange={handleChange}
+                    required
                     className="bg-transparent border border-[0.5px] border-gold/30 px-4 py-3 font-display text-sm text-ink placeholder:text-muted focus:outline-none focus:border-gold/60 transition-colors"
                   />
                   <input
                     type="text"
                     name="organization"
-                    placeholder="Organization (optional)"
+                    placeholder="Your Organization (Freelance / Independent if not affiliated)"
                     value={form.organization}
                     onChange={handleChange}
+                    required
                     className="bg-transparent border border-[0.5px] border-gold/30 px-4 py-3 font-display text-sm text-ink placeholder:text-muted focus:outline-none focus:border-gold/60 transition-colors"
                   />
                   <button

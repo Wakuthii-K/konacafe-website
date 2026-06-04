@@ -16,7 +16,7 @@ export default function HowWeConvene() {
       <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted mb-8">
         How We Convene
       </p>
-      <div className="flex flex-col justify-between flex-1">
+      <div className="flex flex-col gap-3 lg:gap-0 lg:justify-between lg:flex-1">
         {WORDS.map(({ text, size, opacity, indent }) => (
           <span
             key={text}
