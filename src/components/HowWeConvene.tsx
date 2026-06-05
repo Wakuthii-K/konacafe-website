@@ -1,14 +1,29 @@
 "use client";
 
-const WORDS = [
-  { text: "Screenings",        size: "clamp(1.5rem, 8vw, 10rem)",  opacity: 0.9,  indent: "0%" },
-  { text: "Panel",             size: "clamp(1.4rem, 7vw, 6rem)",  opacity: 0.4,  indent: "18%" },
-  { text: "Discussions",       size: "clamp(1.4rem, 7vw, 6rem)",  opacity: 0.55, indent: "10%" },
-  { text: "Policy & Industry", size: "clamp(1rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
-  { text: "Conversations",     size: "clamp(1rem, 5vw, 4rem)",    opacity: 0.85, indent: "0%" },
-  { text: "Lectures",          size: "clamp(1.8rem, 9vw, 7.5rem)", opacity: 0.35, indent: "8%" },
-  { text: "Workshops",         size: "clamp(1.8rem, 9vw, 7.5rem)", opacity: 0.9,  indent: "0%" },
+const ITEMS: ({ group: true; words: { text: string; size: string; opacity: number; indent: string }[] } | { group: false; text: string; size: string; opacity: number; indent: string })[] = [
+  { group: false, text: "Screenings",        size: "clamp(1.5rem, 8vw, 10rem)",   opacity: 0.9,  indent: "0%" },
+  { group: true,  words: [
+    { text: "Panel",             size: "clamp(1.4rem, 7vw, 6rem)",   opacity: 0.4,  indent: "18%" },
+    { text: "Discussions",       size: "clamp(1.4rem, 7vw, 6rem)",   opacity: 0.55, indent: "10%" },
+  ]},
+  { group: true,  words: [
+    { text: "Policy & Industry", size: "clamp(1rem, 5vw, 4rem)",     opacity: 0.85, indent: "0%" },
+    { text: "Conversations",     size: "clamp(1rem, 5vw, 4rem)",     opacity: 0.85, indent: "0%" },
+  ]},
+  { group: false, text: "Lectures",          size: "clamp(1.8rem, 9vw, 7.5rem)",  opacity: 0.35, indent: "8%" },
+  { group: false, text: "Workshops",         size: "clamp(1.8rem, 9vw, 7.5rem)",  opacity: 0.9,  indent: "0%" },
 ];
+
+function Word({ text, size, opacity, indent }: { text: string; size: string; opacity: number; indent: string }) {
+  return (
+    <span
+      className="block font-display font-bold uppercase cursor-default how-we-convene-word"
+      style={{ fontSize: size, lineHeight: 0.92, color: `rgba(245, 240, 232, ${opacity})`, marginLeft: indent }}
+    >
+      {text}
+    </span>
+  );
+}
 
 export default function HowWeConvene() {
   return (
@@ -17,20 +32,15 @@ export default function HowWeConvene() {
         How We Convene
       </p>
       <div className="flex flex-col flex-1 justify-between gap-0">
-        {WORDS.map(({ text, size, opacity, indent }) => (
-          <span
-            key={text}
-            className="block font-display font-bold uppercase cursor-default how-we-convene-word"
-            style={{
-              fontSize: size,
-              lineHeight: 0.92,
-              color: `rgba(245, 240, 232, ${opacity})`,
-              marginLeft: indent,
-            }}
-          >
-            {text}
-          </span>
-        ))}
+        {ITEMS.map((item, i) =>
+          item.group ? (
+            <div key={i}>
+              {item.words.map((w) => <Word key={w.text} {...w} />)}
+            </div>
+          ) : (
+            <Word key={item.text} {...item} />
+          )
+        )}
       </div>
 
       <style>{`
