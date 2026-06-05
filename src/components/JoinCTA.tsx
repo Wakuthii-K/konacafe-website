@@ -81,7 +81,7 @@ export default function JoinCTA() {
             ) : (
               <>
                 <p className="font-display text-[9px] tracking-[0.22em] uppercase text-muted mb-6">
-                  Join the Collective
+                  Join the Conversation
                 </p>
                 <h3
                   className="font-display font-normal text-ink leading-tight mb-8"
