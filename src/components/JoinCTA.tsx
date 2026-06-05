@@ -39,15 +39,15 @@ export default function JoinCTA() {
       className="border-b border-[0.5px] border-gold/10 p-10 lg:p-24 flex flex-col items-center text-center"
     >
       <h2
-        className="font-display font-normal italic text-ink leading-tight mb-6"
+        className="font-display font-normal text-ink leading-tight mb-6"
         style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
       >
         Join the conversation.
       </h2>
-      <p className="font-display text-muted text-sm max-w-md mb-10 leading-relaxed">
+      <p className="font-display text-muted text-sm max-w-md mb-3 leading-relaxed">
         Receive invitations to upcoming gatherings.
       </p>
-      <p className="font-display text-muted text-sm max-w-md mb-10 leading-relaxed">
+      <p className="font-display text-muted text-sm max-w-md mb-6 leading-relaxed">
         Limited Places. Curated Membership.
       </p>
 
@@ -74,7 +74,7 @@ export default function JoinCTA() {
               <div className="flex flex-col items-center text-center py-8 gap-4">
                 <div className="w-8 h-[0.5px] bg-gold" />
                 <p className="font-display text-[10px] tracking-[0.18em] uppercase text-gold">
-                  Welcome to the collective. We&apos;ll be in touch.
+                  Welcome to the Kona Cafe Society. We will be in touch.
                 </p>
                 <div className="w-8 h-[0.5px] bg-gold" />
               </div>
