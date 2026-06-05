@@ -42,7 +42,7 @@ export default function JoinCTA() {
         className="font-display font-normal text-ink leading-tight mb-6"
         style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
       >
-        Join the conversation.
+        Join the Conversation.
       </h2>
       <p className="font-display text-muted text-sm max-w-md mb-3 leading-relaxed">
         Receive invitations to upcoming gatherings.
