@@ -51,7 +51,7 @@ function EventDetail({ event, onBack }: { event: KonaEvent; onBack: () => void }
         onClick={onBack}
         className="px-10 lg:px-16 pt-8 font-display text-[10px] tracking-[0.18em] uppercase text-muted hover:text-ink transition-colors flex items-center gap-2"
       >
-        ← Back to Convections
+        ← Back to Conventions
       </button>
 
 
@@ -90,16 +90,6 @@ function EventDetail({ event, onBack }: { event: KonaEvent; onBack: () => void }
             <MetaItem label="Access" value="Open to Members & Guests" />
           </div>
 
-          {event.status === "Upcoming" && event.rsvpUrl && event.rsvpUrl !== "#" && (
-            <a
-              href={event.rsvpUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 font-display text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-8 py-4 hover:bg-gold-light transition-colors font-medium"
-            >
-              Reserve Your Place →
-            </a>
-          )}
         </div>
 
         {/* Right */}

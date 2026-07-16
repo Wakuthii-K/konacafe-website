@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 const NAV_LINKS = [
-  { label: "Convections", href: "/convections" },
+  { label: "Conventions", href: "/convections" },
 ] as const;
 
 export default function Navbar() {

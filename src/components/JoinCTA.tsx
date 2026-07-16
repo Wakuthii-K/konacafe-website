@@ -45,7 +45,7 @@ export default function JoinCTA() {
         Join the Conversation.
       </h2>
       <p className="font-display text-muted text-sm max-w-md mb-3 leading-relaxed">
-        Receive invitations to upcoming convections.
+        Receive invitations to upcoming conventions.
       </p>
       <p className="font-display text-muted text-sm max-w-md mb-6 leading-relaxed">
         Limited Places. Curated Membership.
