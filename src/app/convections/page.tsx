@@ -4,6 +4,8 @@ import Footer from "@/components/Footer";
 import { getFeaturedEvent, getPastEvents } from "@/lib/notion";
 import type { Metadata } from "next";
 
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
   title: "Conventions — Kona Cafe Society",
   description: "Upcoming and past conventions by the Kona Cafe Society.",

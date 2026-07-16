@@ -1,5 +1,3 @@
-import { cacheLife } from "next/cache";
-
 export interface Panelist {
   name: string;
   role: string;
@@ -40,7 +38,7 @@ const FALLBACK_EVENT: KonaEvent = {
   format: "Documentary screening + panel discussion",
   description:
     "Who benefits when Africa's land becomes a carbon market? This gathering convenes voices from ecology, policy, community organising, and climate finance to interrogate the carbon credits business in Kenya — its impact on native communities and the ranging debate on land resource re-colonisation.",
-  rsvpUrl: "https://docs.google.com/forms/d/1Q2iY8YRAgV7-SB6Qsb5hvdRqYWJO-Mm962XdcERBJnk/viewform",
+  rsvpUrl: "#",
   featured: true,
   status: "Upcoming",
   coConvener: "Afrika House",
@@ -77,8 +75,8 @@ function getText(prop: Record<string, unknown> | undefined): string {
 }
 
 function toDirectImageUrl(url: string): string {
+  if (!url) return "";
   // Convert Google Drive links to direct image URLs
-  // Matches: /file/d/ID, ?id=ID, /open?id=ID, /uc?export=view&id=ID
   const driveMatch = url.match(
     /drive\.google\.com\/(?:file\/d\/|(?:open|uc)\?.*?id=|.*?[?&]id=)([a-zA-Z0-9_-]+)/
   ) || url.match(
@@ -129,34 +127,36 @@ function parseEvent(page: Record<string, unknown>): KonaEvent {
   };
 }
 
-export async function getFeaturedEvent(): Promise<KonaEvent> {
-  "use cache";
-  cacheLife("hours");
+async function queryNotion(body: object): Promise<Response> {
+  return fetch(
+    `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`,
+    {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+        "Notion-Version": "2022-06-28",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(body),
+      next: { revalidate: 3600 },
+    }
+  );
+}
 
+export async function getFeaturedEvent(): Promise<KonaEvent> {
   if (!process.env.NOTION_TOKEN || !process.env.NOTION_DATABASE_ID) {
     return FALLBACK_EVENT;
   }
 
   try {
-    const res = await fetch(
-      `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
-          "Notion-Version": "2022-06-28",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          filter: {
-            and: [
-              { property: "Featured", checkbox: { equals: true } },
-              { property: "Status", select: { equals: "Upcoming" } },
-            ],
-          },
-        }),
-      }
-    );
+    const res = await queryNotion({
+      filter: {
+        and: [
+          { property: "Featured", checkbox: { equals: true } },
+          { property: "Status", select: { equals: "Upcoming" } },
+        ],
+      },
+    });
 
     if (!res.ok) return FALLBACK_EVENT;
 
@@ -171,32 +171,18 @@ export async function getFeaturedEvent(): Promise<KonaEvent> {
 }
 
 export async function getPastEvents(): Promise<KonaEvent[]> {
-  "use cache";
-  cacheLife("hours");
-
   if (!process.env.NOTION_TOKEN || !process.env.NOTION_DATABASE_ID) {
     return [];
   }
 
   try {
-    const res = await fetch(
-      `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`,
-      {
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
-          "Notion-Version": "2022-06-28",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          filter: {
-            property: "Status",
-            select: { equals: "Past" },
-          },
-          sorts: [{ property: "Date", direction: "descending" }],
-        }),
-      }
-    );
+    const res = await queryNotion({
+      filter: {
+        property: "Status",
+        select: { equals: "Past" },
+      },
+      sorts: [{ property: "Date", direction: "descending" }],
+    });
 
     if (!res.ok) return [];
 
