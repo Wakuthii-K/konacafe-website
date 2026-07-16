@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import type { KonaEvent } from "@/lib/notion";
 
 function formatDate(dateStr: string): string {
@@ -141,13 +140,10 @@ function UpNextCard({ event, onClick }: { event: KonaEvent; onClick: () => void 
         {/* Cover image — portrait 3:4 */}
         {event.coverImage ? (
           <div className="relative w-full" style={{ aspectRatio: "3/4" }}>
-            <Image
+            <img
               src={event.coverImage}
               alt={event.title}
-              fill
-              className="object-cover group-hover:scale-[1.02] transition-transform duration-700"
-              sizes="(max-width: 768px) 100vw, 40vw"
-              priority
+              className="absolute inset-0 w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-700"
             />
           </div>
         ) : (
@@ -232,12 +228,10 @@ function PastRow({
         {/* Thumbnail */}
         {event.coverImage ? (
           <div className="relative flex-shrink-0 w-[56px] h-[72px] rounded overflow-hidden">
-            <Image
+            <img
               src={event.coverImage}
               alt={event.title}
-              fill
-              className="object-cover"
-              sizes="56px"
+              className="absolute inset-0 w-full h-full object-cover"
             />
           </div>
         ) : (
