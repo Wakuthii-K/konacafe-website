@@ -30,6 +30,14 @@ export default function Hero() {
             assembling...
           </h1>
 
+          <div className="mt-10">
+            <a
+              href="/convections"
+              className="inline-flex items-center gap-2 font-display text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium"
+            >
+              Upcoming Conventions →
+            </a>
+          </div>
         </div>
       </div>
 

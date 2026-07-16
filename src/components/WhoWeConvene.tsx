@@ -51,7 +51,7 @@ export default function WhoWeConvene() {
               <h3 className="font-display font-normal text-ink text-2xl mt-3 mb-4">
                 {pillar.title}
               </h3>
-              <p className={`font-display text-muted text-xs leading-relaxed ${spansFullRow ? "max-w-sm" : ""}`}>
+              <p className={`font-display text-muted text-sm leading-relaxed ${spansFullRow ? "max-w-sm" : ""}`}>
                 {pillar.desc}
               </p>
             </div>

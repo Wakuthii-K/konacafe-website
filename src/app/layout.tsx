@@ -15,6 +15,7 @@ const dmSans = DM_Sans({
   variable: "--font-dm-sans",
 });
 
+
 export const metadata: Metadata = {
   title: "Kona Café Society",
   description:

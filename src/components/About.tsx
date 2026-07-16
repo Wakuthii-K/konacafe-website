@@ -13,7 +13,7 @@ export default function About() {
           >
             We are the Kona Café Society.
           </h3>
-          <div className="space-y-6 font-display text-muted leading-relaxed text-base">
+          <div className="space-y-6 font-display text-muted leading-relaxed text-lg">
             <p>
               A convening platform and collective that brings together thought
               leaders, policy makers, academics, domain experts and creatives to

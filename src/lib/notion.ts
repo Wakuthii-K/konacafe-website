@@ -23,6 +23,7 @@ export interface KonaEvent {
   status: string;
   coConvener: string;
   panelists: Panelist[];
+  coverImage: string;
 }
 
 const FALLBACK_EVENT: KonaEvent = {
@@ -54,7 +55,17 @@ const FALLBACK_EVENT: KonaEvent = {
     },
     { name: "Moses Maesya", role: "Community Leader" },
   ],
+  coverImage: "",
 };
+
+function getFullText(prop: Record<string, unknown> | undefined): string {
+  if (!prop) return "";
+  const rt = prop.rich_text as Array<{ plain_text: string }> | undefined;
+  if (rt) return rt.map((r) => r.plain_text).join("");
+  const title = prop.title as Array<{ plain_text: string }> | undefined;
+  if (title) return title.map((t) => t.plain_text).join("");
+  return "";
+}
 
 function getText(prop: Record<string, unknown> | undefined): string {
   if (!prop) return "";
@@ -63,6 +74,59 @@ function getText(prop: Record<string, unknown> | undefined): string {
   const title = prop.title as Array<{ plain_text: string }> | undefined;
   if (title?.[0]?.plain_text) return title[0].plain_text;
   return "";
+}
+
+function toDirectImageUrl(url: string): string {
+  // Convert Google Drive links to direct image URLs
+  // Matches: /file/d/ID, ?id=ID, /open?id=ID, /uc?export=view&id=ID
+  const driveMatch = url.match(
+    /drive\.google\.com\/(?:file\/d\/|(?:open|uc)\?.*?id=|.*?[?&]id=)([a-zA-Z0-9_-]+)/
+  ) || url.match(
+    /drive\.usercontent\.google\.com\/download\?id=([a-zA-Z0-9_-]+)/
+  );
+  if (driveMatch) {
+    return `https://lh3.googleusercontent.com/d/${driveMatch[1]}`;
+  }
+  return url;
+}
+
+function parseEvent(page: Record<string, unknown>): KonaEvent {
+  const props = page.properties as Record<string, Record<string, unknown>>;
+
+  const panelistsRaw = getFullText(props.Panelists);
+  const panelists: Panelist[] = panelistsRaw
+    .split("\n")
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => {
+      const commaIndex = line.indexOf(",");
+      if (commaIndex === -1) return { name: line, role: "" };
+      return {
+        name: line.slice(0, commaIndex).trim(),
+        role: line.slice(commaIndex + 1).trim(),
+      };
+    });
+
+  return {
+    id: page.id as string,
+    title: getText(props.Title),
+    subtitle: getText(props.Subtitle),
+    series: (props.Series?.select as { name: string } | undefined)?.name ?? "",
+    seriesNumber: getText(props.SeriesNumber),
+    documentaryAnchor: getText(props.DocumentaryAnchor),
+    date: (props.Date?.date as { start: string } | undefined)?.start ?? "",
+    timeRange: getText(props.TimeRange),
+    venue: getText(props.Venue),
+    city: (props.City?.select as { name: string } | undefined)?.name ?? "",
+    format: (props.Format?.select as { name: string } | undefined)?.name ?? "",
+    description: getText(props.Description),
+    rsvpUrl: (props.RSVPUrl?.url as string | undefined) ?? "#",
+    featured: (props.Featured?.checkbox as boolean | undefined) ?? false,
+    status: (props.Status?.select as { name: string } | undefined)?.name ?? "",
+    coConvener: getText(props.CoConvener),
+    panelists,
+    coverImage: toDirectImageUrl((props.CoverImage?.url as string | undefined) ?? ""),
+  };
 }
 
 export async function getFeaturedEvent(): Promise<KonaEvent> {
@@ -100,35 +164,46 @@ export async function getFeaturedEvent(): Promise<KonaEvent> {
     const page = data.results?.[0];
     if (!page) return FALLBACK_EVENT;
 
-    const props = page.properties as Record<string, Record<string, unknown>>;
-
-    let panelists: Panelist[] = [];
-    try {
-      panelists = JSON.parse(getText(props.Panelists));
-    } catch {
-      panelists = [];
-    }
-
-    return {
-      id: page.id as string,
-      title: getText(props.Title),
-      subtitle: getText(props.Subtitle),
-      series: (props.Series?.select as { name: string } | undefined)?.name ?? "",
-      seriesNumber: getText(props.SeriesNumber),
-      documentaryAnchor: getText(props.DocumentaryAnchor),
-      date: (props.Date?.date as { start: string } | undefined)?.start ?? "",
-      timeRange: getText(props.TimeRange),
-      venue: getText(props.Venue),
-      city: (props.City?.select as { name: string } | undefined)?.name ?? "",
-      format: (props.Format?.select as { name: string } | undefined)?.name ?? "",
-      description: getText(props.Description),
-      rsvpUrl: (props.RSVPUrl?.url as string | undefined) ?? "#",
-      featured: (props.Featured?.checkbox as boolean | undefined) ?? false,
-      status: (props.Status?.select as { name: string } | undefined)?.name ?? "",
-      coConvener: getText(props.CoConvener),
-      panelists,
-    };
+    return parseEvent(page);
   } catch {
     return FALLBACK_EVENT;
+  }
+}
+
+export async function getPastEvents(): Promise<KonaEvent[]> {
+  "use cache";
+  cacheLife("hours");
+
+  if (!process.env.NOTION_TOKEN || !process.env.NOTION_DATABASE_ID) {
+    return [];
+  }
+
+  try {
+    const res = await fetch(
+      `https://api.notion.com/v1/databases/${process.env.NOTION_DATABASE_ID}/query`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${process.env.NOTION_TOKEN}`,
+          "Notion-Version": "2022-06-28",
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          filter: {
+            property: "Status",
+            select: { equals: "Past" },
+          },
+          sorts: [{ property: "Date", direction: "descending" }],
+        }),
+      }
+    );
+
+    if (!res.ok) return [];
+
+    const data = await res.json();
+    const pages = data.results ?? [];
+    return pages.map((page: Record<string, unknown>) => parseEvent(page));
+  } catch {
+    return [];
   }
 }
