@@ -138,7 +138,7 @@ async function queryNotion(body: object): Promise<Response> {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(body),
-      next: { revalidate: 3600 },
+      next: { revalidate: 300 },
     }
   );
 }
