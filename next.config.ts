@@ -6,6 +6,15 @@ const nextConfig: NextConfig = {
       { protocol: "https", hostname: "**" },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: "/convections",
+        destination: "/conventions",
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;

@@ -32,7 +32,7 @@ export default function Hero() {
 
           <div className="mt-10">
             <a
-              href="/convections"
+              href="/conventions"
               className="inline-flex items-center gap-2 font-display text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-6 py-3 hover:bg-gold-light transition-colors font-medium"
             >
               Upcoming Conventions →
