@@ -89,6 +89,17 @@ function EventDetail({ event, onBack }: { event: KonaEvent; onBack: () => void }
             <MetaItem label="Access" value="Open to Members & Guests" />
           </div>
 
+          {event.rsvpUrl && event.rsvpUrl !== "#" && (
+            <a
+              href={event.rsvpUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 font-display text-[10px] tracking-[0.18em] uppercase bg-gold text-ink px-8 py-4 hover:bg-gold-light transition-colors font-medium"
+            >
+              Reserve Your Seat →
+            </a>
+          )}
+
         </div>
 
         {/* Right */}
